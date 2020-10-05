@@ -1,9 +1,9 @@
-package DP.knapsack.second_subsetSum.first_existsOrNot;
+package DP.knapsack.first_zeroOneKnapSack.second_subsetSum.first_existsOrNot;
 
 public class SubSetSumRecur
 {
     boolean isSubSetPresent(int[] arr, int sum, int nItems){
-        //If the sum is zero, then it is always true as empty subset {} sum is zerp
+        //If the sum is zero, then it is always true as empty subset {} sum is zero
         if(sum==0) return true;
         //If sum is not zero but number of items is zero then the subset is not at all possible
         if(nItems==0) return false;

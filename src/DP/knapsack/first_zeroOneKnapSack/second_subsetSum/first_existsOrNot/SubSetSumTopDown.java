@@ -1,4 +1,4 @@
-package DP.knapsack.second_subsetSum.first_existsOrNot;
+package DP.knapsack.first_zeroOneKnapSack.second_subsetSum.first_existsOrNot;
 
 public class SubSetSumTopDown
 {

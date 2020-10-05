@@ -1,4 +1,4 @@
-package DP.knapsack.second_subsetSum.third_count;
+package DP.knapsack.first_zeroOneKnapSack.second_subsetSum.third_count;
 
 public class SubSetSumCountRecur
 {

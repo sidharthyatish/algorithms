@@ -1,4 +1,4 @@
-package DP.knapsack.first_zeroOneKnapSack;
+package DP.knapsack.first_zeroOneKnapSack.first_zeroOneKnapSack;
 
 public class RecursiveZeroOneKnapSack
 {

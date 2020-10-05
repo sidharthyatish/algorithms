@@ -1,8 +1,8 @@
-package DP.knapsack.second_subsetSum.third_count;
+package DP.knapsack.first_zeroOneKnapSack.second_subsetSum.third_count;
 
 public class SubSetSumCountTopDown
 {
-    int numberOfSubSets(int[] arr, int sum, int n){
+    public int numberOfSubSets(int[] arr, int sum, int n){
         int[][] table = new int[n+1][sum+1];
         
         for(int i=0;i<=n;i++){

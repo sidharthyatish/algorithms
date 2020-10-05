@@ -1,7 +1,6 @@
-package DP.knapsack.second_subsetSum.second_equalSumPartition;
+package DP.knapsack.first_zeroOneKnapSack.second_subsetSum.second_equalSumPartition;
 
-import DP.knapsack.second_subsetSum.first_existsOrNot.SubSetSumRecur;
-import DP.knapsack.second_subsetSum.first_existsOrNot.SubSetSumTopDown;
+import DP.knapsack.first_zeroOneKnapSack.second_subsetSum.first_existsOrNot.SubSetSumTopDown;
 
 public class EqualSumPartition
 {
