@@ -46,6 +46,7 @@ public class PrintLCS
         while(i>0&&j>0){
             if(X.charAt(i-1)==Y.charAt(j-1)){
                 lcsString.append(X.charAt(i-1));
+                //Move to ($) position
                 i--;
                 j--;
             }
