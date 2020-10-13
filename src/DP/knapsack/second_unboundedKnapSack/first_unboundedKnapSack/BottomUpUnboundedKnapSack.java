@@ -1,6 +1,6 @@
 package DP.knapsack.second_unboundedKnapSack.first_unboundedKnapSack;
 
-public class TopDownUnboundedKnapSack
+public class BottomUpUnboundedKnapSack
 {
     int maxProfit(int weights[], int values[],int capacity, int nItems){
         int[][] dp = new int[nItems+1][capacity+1];

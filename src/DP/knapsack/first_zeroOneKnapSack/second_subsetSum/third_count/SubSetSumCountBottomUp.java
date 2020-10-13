@@ -1,6 +1,6 @@
 package DP.knapsack.first_zeroOneKnapSack.second_subsetSum.third_count;
 
-public class SubSetSumCountTopDown
+public class SubSetSumCountBottomUp
 {
     public int numberOfSubSets(int[] arr, int sum, int n){
         int[][] table = new int[n+1][sum+1];
@@ -27,7 +27,7 @@ public class SubSetSumCountTopDown
     
     public static void main(String[] args)
     {
-        SubSetSumCountTopDown ss = new SubSetSumCountTopDown();
+        SubSetSumCountBottomUp ss = new SubSetSumCountBottomUp();
         int[] arr = new int[]{1,2,3,3};
         int sum =6;
         System.out.println(ss.numberOfSubSets(arr,6,arr.length));

@@ -1,6 +1,6 @@
 package DP.knapsack.first_zeroOneKnapSack.second_subsetSum.first_existsOrNot;
 
-public class SubSetSumTopDown
+public class SubSetSumBottomUp
 {
     public boolean isSubSetPresent(int[] arr, int sum, int nItems){
         boolean[][] dp = new boolean[nItems+1][sum+1];
@@ -20,7 +20,7 @@ public class SubSetSumTopDown
     
     public static void main(String[] args)
     {
-        SubSetSumTopDown ss = new SubSetSumTopDown();
+        SubSetSumBottomUp ss = new SubSetSumBottomUp();
         int arr[] = new int[]{5,3,2,1,4};
         int sum = 15;
         System.out.println(ss.isSubSetPresent(arr,sum,arr.length));

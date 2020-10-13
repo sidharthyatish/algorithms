@@ -2,7 +2,7 @@ package DP.knapsack.first_zeroOneKnapSack.first_zeroOneKnapSack;
 
 import java.util.Arrays;
 
-public class TopDownZeroOneKnapSack
+public class BottomupZeroOneKnapSack
 {
     int[][] knapSack;
     
@@ -36,7 +36,7 @@ public class TopDownZeroOneKnapSack
     
     public static void main(String[] args)
     {
-        TopDownZeroOneKnapSack ks = new TopDownZeroOneKnapSack();
+        BottomupZeroOneKnapSack ks = new BottomupZeroOneKnapSack();
         ks.knapSack = new int[10][10];
         for(int i=0;i<ks.knapSack.length;i++){
             Arrays.fill(ks.knapSack[i],Integer.MIN_VALUE);

@@ -1,6 +1,6 @@
 package DP.knapsack.second_unboundedKnapSack.second_rodCutting;
 
-public class TopDownRodCutting
+public class BottomUpRodCutting
 {
     int maxProfit(int[] prices, int maxLength){
         
@@ -26,7 +26,7 @@ public class TopDownRodCutting
     
     public static void main(String[] args)
     {
-        TopDownRodCutting rc = new TopDownRodCutting();
+        BottomUpRodCutting rc = new BottomUpRodCutting();
         int[] lengths = new int[]{1,2,3,4,5,6,7,8};
         int[] prices = new int[]{1, 5, 8, 9, 10, 17, 17, 20};
         System.out.println(rc.maxProfit(prices,prices.length));

@@ -1,8 +1,8 @@
 package DP.lcs.first_lcs;
 
-public class LCSTopDown
+public class LCSBottomUp
 {
-    int lcs(String X,String Y, int m,int n){
+    public int lcs(String X,String Y, int m,int n){
         int[][] dp = new int[m+1][n+1];
         /*
             In top down, we use the same approach of recursion
@@ -32,7 +32,7 @@ public class LCSTopDown
     
     public static void main(String[] args)
     {
-        LCSTopDown lcs = new LCSTopDown();
+        LCSBottomUp lcs = new LCSBottomUp();
         String a = "abcdef";
         String b = "abced";
         System.out.println(lcs.lcs(a,b,a.length(),b.length()));

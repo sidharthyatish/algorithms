@@ -1,10 +1,13 @@
 package DP.knapsack.first_zeroOneKnapSack.second_subsetSum.second_equalSumPartition;
 
-import DP.knapsack.first_zeroOneKnapSack.second_subsetSum.first_existsOrNot.SubSetSumTopDown;
+import DP.knapsack.first_zeroOneKnapSack.second_subsetSum.first_existsOrNot.SubSetSumBottomUp;
 
 public class EqualSumPartition
 {
-    SubSetSumTopDown subsetSum;
+    SubSetSumBottomUp subsetSum;
+    EqualSumPartition(){
+        subsetSum = new SubSetSumBottomUp();
+    }
     /*
     Re-uses exists subset sum solution
     

@@ -1,10 +1,10 @@
 package DP.knapsack.first_zeroOneKnapSack.second_subsetSum.fourth_min_subsetSumDifference;
 
-import DP.knapsack.first_zeroOneKnapSack.second_subsetSum.third_count.SubSetSumCountTopDown;
+import DP.knapsack.first_zeroOneKnapSack.second_subsetSum.third_count.SubSetSumCountBottomUp;
 
 public class SubSetSumDiffCount
 {
-    SubSetSumCountTopDown subsetCount;
+    SubSetSumCountBottomUp subsetCount;
     /*
         1. Given an array and a difference
         2. Return the count of the subsets whose sum has the given diff
