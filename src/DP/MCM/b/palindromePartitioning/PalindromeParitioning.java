@@ -22,6 +22,7 @@ public class PalindromeParitioning
         //If string is a palindrome, then no partition is required
         if(i>=j) return 0; //If i==j that is a single char which is a palindrome, if i>j, it is out of index
         
+        //For memoization check here itself
         if(isPalindrome(str, i, j)) return 0;
         
         //Range of k is from i to j-1. If k ==j, then k+1 is invalid
