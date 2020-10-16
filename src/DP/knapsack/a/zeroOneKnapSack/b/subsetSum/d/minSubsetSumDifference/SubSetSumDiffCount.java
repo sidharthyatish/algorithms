@@ -1,6 +1,6 @@
-package DP.knapsack.a.zeroOneKnapSack.b.subsetSum.fourth_min_subsetSumDifference;
+package DP.knapsack.a.zeroOneKnapSack.b.subsetSum.d.minSubsetSumDifference;
 
-import DP.knapsack.a.zeroOneKnapSack.b.subsetSum.third_count.SubSetSumCountBottomUp;
+import DP.knapsack.a.zeroOneKnapSack.b.subsetSum.c.count.SubSetSumCountBottomUp;
 
 public class SubSetSumDiffCount
 {

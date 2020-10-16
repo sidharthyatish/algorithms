@@ -1,4 +1,4 @@
-package DP.knapsack.a.zeroOneKnapSack.b.subsetSum.fourth_min_subsetSumDifference;
+package DP.knapsack.a.zeroOneKnapSack.b.subsetSum.d.minSubsetSumDifference;
 
 public class MinSubSetSumDiff
 {

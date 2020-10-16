@@ -1,4 +1,4 @@
-package DP.knapsack.a.zeroOneKnapSack.b.subsetSum.first_existsOrNot;
+package DP.knapsack.a.zeroOneKnapSack.b.subsetSum.a.existsOrNot;
 
 public class SubSetSumBottomUp
 {
