@@ -80,7 +80,7 @@ public class ScrambledStringRecursive
                     solve(a.substring(0,i),b.substring(n-i,n)) &&
                             solve(a.substring(i,n),(b.substring(0,n-i)));
             
-            //If they are not swapped gr|eat   gr|eat we need to compare same positions
+            //If they are not swapped gr|eat   gr|eat we need to compare same positions for both halves
             boolean ifTheyAreNotSwapped =
                     solve(a.substring(0,i),b.substring(0,i)) &&
                             solve(a.substring(i,n),(b.substring(i,n)));
