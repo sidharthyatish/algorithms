@@ -7,7 +7,7 @@ public class BottomupZeroOneKnapSack
     int[][] knapSack;
     
     int maxProfit(int[] weights, int[] values, int capacity, int nItems){
-        //in top down, replace nItems, capacity in recursive calls to i,j in interation
+        //in top down, replace nItems, capacity in recursive calls to i,j in iteration
         for(int i=0;i<=nItems;i++){
             for(int j=0;j<=capacity;j++){
                 //initialisation (or) base condition in recursion
