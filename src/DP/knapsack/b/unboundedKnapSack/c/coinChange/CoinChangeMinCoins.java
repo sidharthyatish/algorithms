@@ -14,7 +14,7 @@ public class CoinChangeMinCoins
         
         /*
             1. I have a choice
-                1.1. I can include the coin (increase the count by 1) and proceed with remaining coins
+                1.1. I can include the coin (increase the count by 1) and proceed with same coin
                 1.2. I can ignore
             2. I don't have a choice
                 2.1. I have to ignore
