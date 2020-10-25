@@ -18,6 +18,11 @@ public class LargestAreaInHistogram
          
          In geeks for geeks they use while loop and hence updating i seems to be a little complex to understand from code
          
+            stack           popped elem      index of elem capable of popping it out of stack
+         [ elem1 < elem2 |  (popped_elem)    i
+                    NSE_left               NSE_right
+                    
+                    
          for every i
             if stack is empty or the current bar is bigger than the bar on top of stack, push it
             else{ we found a bar that is smaller than the one inside the stack. This is capable of popping all the bigger ones inside
@@ -49,8 +54,12 @@ public class LargestAreaInHistogram
         
         int maxArea =Integer.MIN_VALUE;
         int currArea;
+        
+        //Every bar can act as right NSE or left NSE
+        //It it can be left NSE, it will be inside the stack, if it can be right NSE, it will be outside the stack
         for(int i=0;i<hist.length;i++){
             
+            //It means that i can act as right NSE
             while (!stack.isEmpty() && hist[i]<=hist[stack.peek()]){
                 int popped = stack.pop();
                 if(stack.isEmpty())
@@ -60,6 +69,8 @@ public class LargestAreaInHistogram
                 maxArea = Math.max(currArea,maxArea);
             }
             
+            //After i has completed its role as right NSE, it goes to the stack to act as left NSE
+            //Or if i cant act as right NSE, then its role becomes left NSE
             stack.push(i);
         }
         
