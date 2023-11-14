@@ -22,7 +22,7 @@ public class EqualSumPartition
     Say the total sum of the array is 22. If there is equal partition available, then each subset sum will be 11
     We can just find if there is one subset with sum as 11. If this is true, then by default, the remaining subset must sum to 11
      */
-    boolean existsEqualSumPartition(int[] arr, int sum, int n){
+    boolean existsEqualSumPartition(int[] arr, int n){
         //Find the sum of elements of array
         int totalSum  = 0;
         for(int elem : arr) totalSum+=elem;
