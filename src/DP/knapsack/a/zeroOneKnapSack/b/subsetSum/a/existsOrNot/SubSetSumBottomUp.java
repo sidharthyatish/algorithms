@@ -7,8 +7,8 @@ public class SubSetSumBottomUp
         
         for(int i=0;i<=nItems;i++){
             for(int j=0;j<=sum;j++){
-                if(i==0&&j>0) dp[i][j] = false;
-                else if(j==0) dp[i][j] = true;
+                if(i==0&&j>0) dp[i][j] = false; // why j>0 ? becasue if j==0=> sum==0 then its always true. In recursive code this is nItems==0 (comes below)
+                else if(j==0) dp[i][j] = true; // in recursive code this is sum==0 (comes above)
                 else if(arr[i-1]<=j)
                     dp[i][j] = dp[i-1][j-arr[i-1]] || dp[i-1][j];
                 
