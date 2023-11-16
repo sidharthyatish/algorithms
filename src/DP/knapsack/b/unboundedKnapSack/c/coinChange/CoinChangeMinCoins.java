@@ -1,5 +1,10 @@
 package DP.knapsack.b.unboundedKnapSack.c.coinChange;
 
+/* 
+NOTE: Aditya verma suggests initialising second row as well with infinity. But I have skipped that and followed the same pattern as previous problems.
+
+This solution is accepted in GFG as well as leetcode. The additional change is if the dp[n][sum] == infinity ? return -1 : return dp[n][sum]
+*/
 public class CoinChangeMinCoins
 {
     int minNumberOfCoinsRecursive(int[] coins, int sum, int n){
