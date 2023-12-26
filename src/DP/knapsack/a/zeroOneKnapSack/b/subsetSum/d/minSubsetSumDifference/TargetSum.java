@@ -25,7 +25,9 @@ class TargetSum {
        for(int eachNum : arr) totalSum+=eachNum;
 
        int requiredSum = (diff+totalSum)/2;
-       return subSetSumCount.numberOfSubSets(arr,requiredSum,arr.length);
+
+       // NOTE : if diff+totalSum is odd, then the result is zero. So add a check for that
+       return (diff+totalSum)%2!=0? 0 : subSetSumCount.numberOfSubSets(arr,requiredSum,arr.length);
     }
 
 
