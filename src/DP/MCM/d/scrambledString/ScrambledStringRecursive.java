@@ -41,7 +41,7 @@ public class ScrambledStringRecursive
                 - Compare rest half of a with first half of b  --> (1.2) Both must be scrambled strings of each other
                 - return true if 1.1 and 1.2 are true
           2. not swapped --> (2)
-                - a= gr|eat, b=gr|eat
+                - a= gr|eat, b=gr|ate
                 - Note the position of partition is same for both
                 - Compare if first two of a with first 2 of b --> (2.1) Both must be scrambled strings of each other
                 - Compare rest half of both a and b           --> (2.2) Both must be scrambled strings of each other
