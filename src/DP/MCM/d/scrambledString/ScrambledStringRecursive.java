@@ -59,11 +59,21 @@ public class ScrambledStringRecursive
         return solve(a,b);
     }
     boolean solve(String a, String b){
+
+        /*
+        These two conditions are not needed - verified gfg submission.
+        
         //If both are diff length, they are not scrambled strings at all
         if(a.length()!=b.length()) return false;
         
         //Empty strings are scrambled
         if(a.length()==0) return true;
+
+
+        Why? if strings are equal, they are scrambled, else (now they are unequal and) if they are a single character they are not. 
+
+        So the below two conditions to check inequality and single character is enough to determine if they are of different length
+        */
         
         //Equal strings are scrambled strings
         if(a.equals(b)) return true;
