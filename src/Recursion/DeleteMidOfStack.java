@@ -4,6 +4,20 @@ import java.util.Stack;
 
 public class DeleteMidOfStack
 {
+
+    //refactored solution with a single method. GFG submission works for this solution as well
+    public void deleteFromStackAtPosition(Stack<Integer> stack, int pos){
+        if(stack.isEmpty()) return;
+        if(pos==1){
+            stack.pop();
+            return;
+        }
+        int currElem = stack.pop();
+        deleteFromStackAtPosition(stack,pos-1);
+        stack.push(currElem);
+    }
+
+
     void deleteMid(Stack<Integer> stack){
         int k = stack.size()/2 +1;
         if(k==0 || stack.size() ==0) return;
