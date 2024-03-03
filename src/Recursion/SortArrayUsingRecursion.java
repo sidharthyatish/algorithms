@@ -1,14 +1,14 @@
 package Recursion;
 
-public class SortUsingRecursion {
+public class SortArrayUsingRecursion {
     //insert an element with an array containing n-1 values already in it.
-    public static void insert(int[] arr, int n, int elem){
+    public static void insertInAlreadySortedArray(int[] arr, int n, int elem){
         if(n==0 || elem > arr[n-1]){
             arr[n] = elem;
             return;
         }
         int lastElem = arr[n-1];
-        insert(arr,n-1,elem);
+        insertInAlreadySortedArray(arr,n-1,elem);
         arr[n]=lastElem;
     }
 
@@ -18,12 +18,12 @@ public class SortUsingRecursion {
         //sort remaining elements
         sort(arr,n-1);
         //insert into the array of remaining elements. If its bigger element it will be any ways inserted in the last pos
-        insert(arr,n-1,lastElem);
+        insertInAlreadySortedArray(arr,n-1,lastElem);
     }
     public static void main(String[] args) {
         //Testing insert on sorted array
         int sortedArray[] = {8,10,11,13,15,0}; //last element is zero to leave for the filling position
-        insert(sortedArray,sortedArray.length-1,14);
+        insertInAlreadySortedArray(sortedArray,sortedArray.length-1,14);
 
         printArray(sortedArray);
 
