@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class LetterCasePermutation {
+
+    public static void main(String[] args) {
+        List<String> results = new ArrayList<>();
+        String input = "abc";
+        String output = "";
+
+        solve(input,output,results);
+
+        System.out.println(results);
+
+    }
+
+    private static void solve(String input, String output, List<String> results) {
+        if(input.isEmpty()){
+            results.add(output);
+            return;
+        }
+
+        String outputWithSmallerCase = output+input.charAt(0);
+        String outputWithUpperCase = output+String.valueOf(input.charAt(0)).toUpperCase();
+        String smallerInput = new StringBuilder(input).deleteCharAt(0).toString();
+        
+        solve(smallerInput,outputWithSmallerCase,results);
+        solve(smallerInput,outputWithUpperCase,results);
+    }
+}
