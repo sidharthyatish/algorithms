@@ -10,6 +10,13 @@ class FirstAndLastOccurrenceOfElement{
         - Update the res and the mid in each call respectively
 
 
+        * Variations:
+        - Count of element (frequency) in sorted array
+            -> get the first occurrence index -- (1)
+            -> get the last occurrence index  -- (2)
+            -> (lastIndex - firstIndex) + 1  // zero based index so size will be one point greater
+
+
     */
     public long binarySearch(long arr[], long elem, boolean isFirstOccurrence){
         int start = 0;
