@@ -1,6 +1,7 @@
 class NextAlphabeticalElement{
 
     /* 
+    https://leetcode.com/problems/find-smallest-letter-greater-than-target/
     Same as ceil but we just ignore the condition of arr[mid] == target altogether
      */
     public char nextGreatestLetter(char[] letters, char target) {
