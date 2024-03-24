@@ -18,6 +18,23 @@ class SearchInInfiniteArray{
             finally binary search with the latest low and high
 
 
+
+        ****** VARIATION *****
+        find the first position of 1 in infinite binary sorted array
+
+        [ 00000000000111111...... INFINITE]
+
+        same approach as above to find the high...
+
+        but here
+        loop til elem == 1
+        low = high
+        high = high *2
+
+
+        now we have a high which is 1. But we dont know if its the first occurrence.
+
+        This so a modified binary search to find the first occurrence (res = high,high = mid-1) to go to left sub array
         
         */
        return 0;
