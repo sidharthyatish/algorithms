@@ -39,8 +39,8 @@ class MinDiffElementInSortedArray{
 
         // Now high = floor and low = ceil, thus they are the neighbours of the element to be searched and are the closest to the searched elem
 
-        int differenceWithFloor = Math.abs(high-elem);
-        int differenceWithCeil = Math.abs(low-elem);
+        int differenceWithFloor = Math.abs(arr[high]-elem);
+        int differenceWithCeil = Math.abs(arr[low]-elem);
         return differenceWithFloor < differenceWithCeil ? arr[high] : arr[low];
     }
 }
