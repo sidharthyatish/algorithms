@@ -1,5 +1,6 @@
 class PeakElement{
     //https://leetcode.com/problems/find-peak-element/
+    // Same problem as Find max element in bitonic array : https://www.geeksforgeeks.org/problems/maximum-value-in-a-bitonic-array3001/1
 
     /* 
         In this problem, the array can:
