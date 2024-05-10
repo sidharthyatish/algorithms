@@ -13,7 +13,7 @@
 i=0
 j=0
 while(i<N){
-    operation_for_j();
+    operation.add(arr[j]);  --> 1
      
      // if window size not met, just increase the window
     if(j-i+1<k){
@@ -22,15 +22,15 @@ while(i<N){
     else if(j-i+1==k){
         perform_calculation_using_operation_so_far();
         
-        operation.remove(arr[i]);
+        operation.remove(arr[i]);  -->2
         
         // slide the window
         i++;
         j++;
         
-        operation.add(arr[j]);
     }
 }
 
 return result;
 ```
+Note : (2) is reverse operation of (1) mostly but with i instead of j
