@@ -36,7 +36,7 @@ class MinWindowSubString {
         if(count>0){
             j++;
         }
-        //this problem doesnt actually fit into the template.
+        //this problem doesnt actually fit into this template. but it fits somewhat the template of fixed size window
 
         // if count is zero, this means the window has all the necessary characters. 
         else if(count==0){
