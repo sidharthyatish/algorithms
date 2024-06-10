@@ -85,7 +85,8 @@ public class NumberOfTimesArrayIsRotated {
         int low = 0;
         int high = nums.length-1;
 
-        if(nums[low]<=nums[high]) return low; //when array is already sorted
+        // if(nums[low]<=nums[high]) return low; //when array is already sorted .NOTE : this condition must be inside the loop. Without this testcases are failing
+        // WHY? Say 4 5 6 7 0 1 2 -> here mid is 7. NOW if I go left or right the array is sorted. I cannot assume that if I discard a sorted array, the rest half is unsorted
 
         while(low<=high){
             int mid = low + (high - low)/2;
@@ -99,8 +100,9 @@ public class NumberOfTimesArrayIsRotated {
             //int nextIndex = (mid+1)%n;
 
 
+            if(nums[low]<=nums[high]) return low; // array is already sorted
 
-            if(nums[mid]<=nums[prevIndex]){ //target condition
+            else if(nums[mid]<=nums[prevIndex]){ //target condition
                 return mid;
             }
             else if(nums[low]<=nums[mid]){ //discard the left subarray if its sorted
