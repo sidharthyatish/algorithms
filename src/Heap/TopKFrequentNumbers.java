@@ -7,6 +7,38 @@ import java.util.PriorityQueue;
 
 public class TopKFrequentNumbers
 {
+
+    //simpler solution for better understanding. In this approach I create a heap of only integers and store the key of the hmap based on the value
+    public int[] topKFrequent(int[] nums, int k) {
+        Map<Integer,Integer> countMap = new HashMap<>();
+        int[] result = new int[k];
+        int index=0;
+
+        for(int n : nums){
+            countMap.put(n,countMap.getOrDefault(n,0)+1);
+        }
+
+        //Add to a heap, sort the map by value and not key
+        //so here key only gets sorted but countMap is refered to arrange it inside
+        PriorityQueue<Integer> minHeap = 
+        new PriorityQueue<>((a,b)->Integer.compare(countMap.get(a),countMap.get(b)));
+
+        //maintain a heap of size k
+        for(int num : countMap.keySet()){
+            minHeap.add(num);
+            if(minHeap.size()>k) minHeap.poll();
+        }
+
+        //get the results
+        for(int i=0;i<k;i++){
+            result[i]=minHeap.poll();
+        }
+
+    
+        return result;
+        
+    }
+
     void printTopKFrequentNumbers(int[] arr, int k){
         
         Map<Integer,Integer> hashMap = new HashMap<>();
