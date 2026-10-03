@@ -9,7 +9,12 @@ public class SubSetSumCountRecur
          */
         
         //If the sum is zero, then it always has one solution (empty subset)
-        if(sum==0) return 1;
+        //Note this works only when the numbers are positive and not when it is zero
+        //if(sum==0) return 1;
+
+        //this is the right way, as if only sum =0 and elements are empty consider 1
+        // other wise, even if the empty subset {} condition is met, we need to look for other elements that might be zero
+        if(sum ==0 && n==0) return 1;
         
         //If there are no elements in the array but the sum is greater than zero, then there is zero subset
         if(n==0) return 0;
