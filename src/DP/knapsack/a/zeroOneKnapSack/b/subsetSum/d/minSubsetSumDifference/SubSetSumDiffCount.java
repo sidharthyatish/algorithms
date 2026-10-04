@@ -34,7 +34,9 @@ public class SubSetSumDiffCount
         for(int elem : arr) totalSum+=elem;
         
         int requiredSum = (diff+totalSum)/2;
+
+        //NOTE: This failed without the following check. diff+totalSum must be odd for this to work. Otherwise we should return 0
         
-        return subsetCount.numberOfSubSets(arr,requiredSum,arr.length);
+        return (diff+totalSum)%2==0? subsetCount.numberOfSubSets(arr,requiredSum,arr.length) : 0;
     }
 }
