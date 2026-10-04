@@ -27,7 +27,12 @@ class TargetSum {
        int requiredSum = (diff+totalSum)/2;
 
        // NOTE : if diff+totalSum is odd, then the result is zero. So add a check for that
-       return (diff+totalSum)%2!=0? 0 : subSetSumCount.numberOfSubSets(arr,requiredSum,arr.length);
+       // NOTE++ : the target can be negative. It will fail with dp init and some cases
+
+       int requiredSum = (totalSum+sum)/2;
+        if(totalSum>0 && requiredSum<0) return 0;
+        return (totalSum+target)%2==0? subSetSumCount.numberOfSubSets(nums,Math.abs(requiredSum)):0;
+       
     }
 
 
