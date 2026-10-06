@@ -10,8 +10,9 @@ public class BottomUpRodCutting
         //Here lengths[i-1] is just gonna be i So we avoided that array itself
         for(int i=0;i<=prices.length;i++){
             for(int j=0;j<=maxLength;j++){
-                if(i==0||j==0) dp[i][j]=0;
                 int len = i;
+                
+                if(i==0||j==0) dp[i][j]=0;
                 else if(len<=j)
                 {
                     // this would have been dp[i][j] = max(prices[i-1]+dp[i][j-lengths[i-1],dp[i-1][j])
