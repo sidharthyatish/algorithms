@@ -11,10 +11,11 @@ public class BottomUpRodCutting
         for(int i=0;i<=prices.length;i++){
             for(int j=0;j<=maxLength;j++){
                 if(i==0||j==0) dp[i][j]=0;
-                else if(i<=j)
+                int len = i;
+                else if(len<=j)
                 {
                     // this would have been dp[i][j] = max(prices[i-1]+dp[i][j-lengths[i-1],dp[i-1][j])
-                    dp[i][j] = Math.max(prices[i - 1] + dp[i][j - i], dp[i - 1][j]);
+                    dp[i][j] = Math.max(prices[i - 1] + dp[i][j - len], dp[i - 1][j]);
                 }
                 else{
                     dp[i][j] = dp[i-1][j];
