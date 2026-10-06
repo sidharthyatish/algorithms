@@ -2,6 +2,31 @@ package DP.knapsack.b.unboundedKnapSack.b.rodCutting;
 
 public class BottomUpRodCutting
 {
+
+
+    //with single array
+    public int cutRod(int[] price) {
+		int n = price.length;
+		int[][] dp = new int[n + 1][n + 1];
+		
+		for (int i = 0; i <= n; i++) {
+			for (int j = 0; j <= n; j++) {
+			    int len = i;
+				if (i == 0 || j == 0)
+					dp[i][j] = 0;
+				else if (len <= j) {
+					dp[i][j] = Math.max(price[i - 1]+dp[i][j - len], dp[i - 1][j]);
+				}
+				else {
+					dp[i][j] = dp[i - 1][j];
+				}
+			}
+		}
+		
+		return dp[n][n];
+		
+	}
+
     int maxProfit(int[] prices, int maxLength){
         
         int[][] dp = new int[maxLength+1][prices.length+1];
@@ -11,7 +36,7 @@ public class BottomUpRodCutting
         for(int i=0;i<=prices.length;i++){
             for(int j=0;j<=maxLength;j++){
                 int len = i;
-                
+
                 if(i==0||j==0) dp[i][j]=0;
                 else if(len<=j)
                 {
