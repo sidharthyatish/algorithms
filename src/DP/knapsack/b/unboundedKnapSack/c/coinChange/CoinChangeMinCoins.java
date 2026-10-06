@@ -39,7 +39,7 @@ public class CoinChangeMinCoins
         
     }
     
-    int minNumberOfCoinsTopDown(int[] coins, int sum, int n){
+    int minNumberOfCoinsBottomUp(int[] coins, int sum, int n){
         int[][] dp =new int[n+1][sum+1];
         
         for(int i=0;i<=n;i++){
@@ -63,6 +63,6 @@ public class CoinChangeMinCoins
         int[] coins = new int[]{9,6,5,1};
         int sum = 11;
         System.out.println(cc.minNumberOfCoinsRecursive(coins,sum,coins.length));
-        System.out.println(cc.minNumberOfCoinsTopDown(coins,sum,coins.length));
+        System.out.println(cc.minNumberOfCoinsBottomUp(coins,sum,coins.length));
     }
 }
